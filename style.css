@@ -339,3 +339,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .pi-chip b { font-size: 1.35rem; }
 @media (max-width: 520px) { .pi-chip img { width: 120px; height: 120px; } }
 .pi-chip img { object-position: center; }
+
+/* ---------- v6: tighter gap between menu bar and first heading ---------- */
+.hero .wrap { padding-block: clamp(1.75rem, 3.5vw, 2.75rem) clamp(2.5rem, 5vw, 4rem); }
+.page-head .wrap { padding-block: clamp(1.5rem, 3.5vw, 2.5rem) clamp(2rem, 4vw, 3rem); }
+
+/* ---------- v7: home hero "zoom into the flower bud" ---------- */
+.zoom-fig { margin: 0; min-width: 0; }
+.zoom-stage { position: relative; }
+.zoom-plants { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; }
+.zoom-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.zoom-lines line { stroke: #f3efe4; stroke-opacity: 0.85; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.zoom-ring { position: absolute; left: 57.5%; top: 40.6%; width: 9%; aspect-ratio: 1; border: 2px solid #f3efe4; border-radius: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 0 4px rgba(18, 41, 31, 0.35); }
+.zoom-cell { position: absolute; width: 42%; aspect-ratio: 1; border-radius: 50%; object-fit: cover; left: -1%; top: 54.4%; border: 5px solid #f3efe4; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+.zoom-fig figcaption { margin-top: 1rem; padding-left: 44%; min-height: 12%; font-family: var(--mono); font-size: 0.8rem; line-height: 1.5; color: var(--on-forest-soft); }
+@media (max-width: 820px) {
+  .zoom-fig { max-width: 560px; }
+  .zoom-fig figcaption { padding-left: 0; margin-top: calc(13% + 1rem); }
+}
